@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      The Fashion Store
+    </ion-title>
+    <ion-button slot="end" [routerLink]="['/pre-purchase']">
+      <ion-icon name="cart-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+<div class="sizeSelect">
+  <ion-list>
+    <ion-item>
+      <ion-select aria-label="Fruit" interface="popover" placeholder="Select an item">
+        <ion-select-option value="apples">Item01</ion-select-option>
+        <ion-select-option value="apples">Item02</ion-select-option>
+        <ion-select-option value="apples">Item03</ion-select-option>
+        <ion-select-option value="apples">Item04</ion-select-option>
+        <ion-select-option value="apples">Item05</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>  
+</div>
+
+<ion-content [fullscreen]="true">
+  <app-card *ngFor="let h of products" [Items]= "h"></app-card>
+</ion-content>

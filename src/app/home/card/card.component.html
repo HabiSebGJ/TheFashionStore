@@ -1,0 +1,13 @@
+<p class="cardSize">
+  <ion-card color="dark">
+      <img alt="Image" [src]="Items.image" />
+      <ion-card-header>
+        <ion-card-title>{{Items.tittle}}</ion-card-title>
+        <ion-card-subtitle>{{Items.id}}</ion-card-subtitle>
+      </ion-card-header> 
+      <ion-card-content>
+      <h1>{{Items.category}}</h1>
+      <h2>Price: {{Items.price | currency}}</h2> 
+      </ion-card-content>
+    </ion-card>
+  </p>
