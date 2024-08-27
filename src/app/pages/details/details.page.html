@@ -14,18 +14,19 @@
   <ion-card>
     <ion-card-content>
       @if(deta){
-        <h1><b>{{deta.title}}</b></h1>+
+        <h1><b>{{deta.title}}</b></h1>
+        <br>
         <img [src]="deta.image">
         <div class="crack">
         <p>{{deta.category}}</p>
-        <h1> {{deta.price | currency}}</h1>
+        <h1>{{deta.price | currency}}</h1>
         </div>
         <br><br>
         <p><b>Desciption</b></p>
         <p>{{deta.description}}</p>
         <br>
         <div class="crack">
-          <h2><b>Bought:{{deta.rating.count}}+</b></h2>
+          <h2><b>Bought: {{deta.rating.count}}+</b></h2>
           <h2><b>{{deta.rating.rate}}<ion-icon name="star-half-outline"></ion-icon></b></h2>
         </div>
       }
