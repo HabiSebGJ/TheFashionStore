@@ -22,7 +22,7 @@
 <ion-content [fullscreen]="true">
 <ion-grid [fixed]="true">
   <ion-row>
-    <app-card *ngFor="let h of products" [Items]= "h"></app-card>
+    <app-card (DoClick)="doNavegate($event)"*ngFor="let h of products" [Items]= "h"></app-card>
   </ion-row>
 </ion-grid>
 </ion-content>

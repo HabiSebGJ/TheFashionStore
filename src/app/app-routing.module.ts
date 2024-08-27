@@ -6,8 +6,14 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
+
   {
-    path: '',
+    path: 'details/:id',
+    loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
+  },
+
+  {
+    path: '**',
     redirectTo: 'home',
     pathMatch: 'full'
   },
@@ -15,6 +21,7 @@ const routes: Routes = [
     path: 'pre-purchase',
     loadChildren: () => import('./pre-purchase/pre-purchase.module').then( m => m.PrePurchasePageModule)
   },
+  
 ];
 
 @NgModule({

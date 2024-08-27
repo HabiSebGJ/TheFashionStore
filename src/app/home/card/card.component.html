@@ -8,7 +8,8 @@
         <ion-card-content>
         <h3>{{Items.category}}</h3>
         <h4>{{Items.rating.rate}}<ion-icon name="star-half-outline"></ion-icon></h4>
-        <h2>Price: {{Items.price | currency}}</h2> 
+        <h2>Price: {{Items.price | currency}}</h2>
+        <ion-button (click)="click(Items.id)">View details</ion-button>
         </ion-card-content>
       </ion-card>
     </p>
