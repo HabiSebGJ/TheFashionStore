@@ -26,7 +26,8 @@ public products : Shoppi[]=[];
     this.products= await this.httpS.get<Shoppi[]>(link +'/category/'+event.detail.value); 
   }
 
-    public doNavegate(event:number){
-      this.navCtr.navigateForward("details/" + event)
+  public doNavegate(event:number){
+      this.navCtr.navigateForward("details/" + event);
     }
+
 }

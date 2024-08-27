@@ -1,9 +1,35 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>details</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Product</ion-title>
+    <ion-button slot="end" [routerLink]="['/pre-purchase']">
+    <ion-icon name="cart-outline"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
+  <ion-card>
+    <ion-card-content>
+      @if(deta){
+        <h1><b>{{deta.title}}</b></h1>+
+        <img [src]="deta.image">
+        <div class="crack">
+        <p>{{deta.category}}</p>
+        <h1> {{deta.price | currency}}</h1>
+        </div>
+        <br><br>
+        <p><b>Desciption</b></p>
+        <p>{{deta.description}}</p>
+        <br>
+        <div class="crack">
+          <h2><b>Bought:{{deta.rating.count}}+</b></h2>
+          <h2><b>{{deta.rating.rate}}<ion-icon name="star-half-outline"></ion-icon></b></h2>
+        </div>
+      }
+      <ion-button color="success" expand="full">Add to card</ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
