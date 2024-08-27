@@ -30,7 +30,15 @@
           <h2><b>{{deta.rating.rate}}<ion-icon name="star-half-outline"></ion-icon></b></h2>
         </div>
       }
-      <ion-button color="success" expand="full">Add to card</ion-button>
+      <ion-button id="headerAnchor" color="success" expand="full">Add to card</ion-button>
+      <ion-toast
+        color="success"
+        trigger="headerAnchor"
+        position="top"
+        positionAnchor="header"
+        message="Added Successfuly"
+        duration="3000">
+      </ion-toast>
     </ion-card-content>
   </ion-card>
 </ion-content>
