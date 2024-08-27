@@ -15,9 +15,13 @@ export class HomePage implements OnInit {
 public products : Shoppi[]=[];
   async ngOnInit(){
    
-    const link= environment.URL_BASE + "products"
+    const link= environment.URL_BASE + "products";
     this.products= await this.httpS.get<Shoppi[]>(link);
     console.log(this.products);
   }
 
+ async onOptionSelected(event:any){
+    const link= environment.URL_BASE + "products";
+    this.products= await this.httpS.get<Shoppi[]>(link +'/category/'+event.detail.value); 
+  }
 }
