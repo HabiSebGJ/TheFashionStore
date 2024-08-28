@@ -1,12 +1,15 @@
-
 <ion-list>
- <ion-item button detail="false">
-  <ion-label>  
-    <h3><b>{{rendering.title}}</b></h3>
-    <br>
-    <h2><b>{{rendering.price | currency}}</b></h2>
-  </ion-label>
-</ion-item>
-
+  <ion-item>
+    <h1 class="ima">
+      <img src="{{rendering.image}}">
+    </h1>
+    <ion-label><b>{{rendering.title}}</b></ion-label>
+    <button>
+      <ion-icon name="trash"></ion-icon>
+    </button>
+    <div class="price">
+      <p><b>{{rendering.price | currency}}</b></p>
+    </div>
+  </ion-item>x  
 </ion-list>
 

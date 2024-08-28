@@ -12,4 +12,14 @@
 
 <ion-content [fullscreen]="true">
   <app-itemc *ngFor="let h of id" [rendering]="h"> </app-itemc>
+
+  <ion-button id="footerAnchor" color="success" expand="full">Payment</ion-button>
+  <ion-toast
+    color="success"
+    trigger="footerAnchor"
+    position="bottom"
+    positionAnchor="footer"
+    message="Payed Successfly"
+    duration="3000"
+></ion-toast>
 </ion-content>
