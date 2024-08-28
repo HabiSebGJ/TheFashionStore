@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CartService } from 'src/app/home/services/cart.service';
 import { HttpService } from 'src/app/home/services/http.service';
 import { Shoppi } from 'src/app/interfaces/api';
 import { environment } from 'src/environments/environment.prod';
@@ -11,7 +12,7 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class DetailsPage implements OnInit {
 public deta!:Shoppi;
-  constructor(private readonly httpSrv: HttpService, private readonly show: ActivatedRoute) { }
+  constructor(private readonly httpSrv: HttpService, private readonly show: ActivatedRoute, private readonly cartS: CartService) { }
 
  async ngOnInit() {
   this.show.params.subscribe(async(show)=>{
@@ -21,5 +22,9 @@ public deta!:Shoppi;
     console.log(this.deta);
   }
   )}
-
+  sendC(){
+    this.cartS.cartadd({id: this.deta.id, price: this.deta.price, 
+      title: this.deta.title, image: this.deta.image});
+    console.log(this.cartS.cartshow());
+  }
 }

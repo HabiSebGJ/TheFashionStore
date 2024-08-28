@@ -1,6 +1,6 @@
 <ion-col size="4">
   <p class="cardSize">
-    <ion-card size="4" color="dark">
+    <ion-card (click)="click(Items.id)" size="4" color="dark">
         <img alt="Image" [src]="Items.image" />
         <ion-card-header>
           <ion-card-title>{{Items.title}}</ion-card-title>
@@ -9,7 +9,6 @@
         <h3>{{Items.category}}</h3>
         <h4>{{Items.rating.rate}}<ion-icon name="star-half-outline"></ion-icon></h4>
         <h2>Price: {{Items.price | currency}}</h2>
-        <ion-button color="secondary" (click)="click(Items.id)">View details</ion-button>
         </ion-card-content>
       </ion-card>
     </p>
