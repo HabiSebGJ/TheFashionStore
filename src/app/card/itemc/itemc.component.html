@@ -1,15 +1,14 @@
-<ion-list>
   <ion-item>
     <h1 class="ima">
       <img src="{{rendering.image}}">
     </h1>
     <ion-label><b>{{rendering.title}}</b></ion-label>
-    <button>
-      <ion-icon name="trash"></ion-icon>
-    </button>
+  
+    
     <div class="price">
+      <ion-icon (click)="click(rendering.id)" name="trash"></ion-icon>
       <p><b>{{rendering.price | currency}}</b></p>
     </div>
-  </ion-item>x  
-</ion-list>
+  </ion-item>
+
 
