@@ -4,11 +4,10 @@
     </h1>
     <ion-label><b>{{rendering.title}}</b></ion-label>
   
-    
     <div class="price">
-      <ion-icon (click)="click(rendering.id)" name="trash"></ion-icon>
       <p><b>{{rendering.price | currency}}</b></p>
     </div>
+    <ion-icon (click)="click(rendering.id)" name="trash"></ion-icon>
   </ion-item>
 
 

@@ -20,6 +20,4 @@ async ngOnInit() {
     this.deta= await this.httpSrv.get<Shoppi>(url);
     console.log(this.id);
   }
-
-
 }
